@@ -130,7 +130,7 @@ document.addEventListener('click',e=>{
   target.scrollIntoView({behavior:'auto',block:'start'});
   requestAnimationFrame(()=>target.scrollIntoView({behavior:'auto',block:'start'}));
  }
-});
+},true);
 
 let orderSubmitting=false;
 form.addEventListener('submit',async e=>{
