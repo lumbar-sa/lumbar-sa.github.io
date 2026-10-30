@@ -174,3 +174,43 @@ body{padding-bottom:0}
 @media(max-width:760px){
   .testimonials-banner{margin:14px calc(50% - 50vw) 18px!important}
 }
+
+
+/* Correct visual order: headline + testimonials first, hero product image below */
+.hero{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:stretch!important;
+  gap:22px!important;
+}
+.hero-copy{
+  order:1!important;
+  width:100%!important;
+  max-width:980px!important;
+  margin:0 auto!important;
+}
+.hero-visual{
+  order:2!important;
+  width:100%!important;
+  max-width:980px!important;
+  margin:0 auto!important;
+}
+.testimonials-banner{
+  display:block!important;
+  order:initial!important;
+  width:100vw!important;
+  max-width:100vw!important;
+  margin:18px calc(50% - 50vw) 22px!important;
+}
+.testimonials-banner img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
+@media(max-width:760px){
+  .hero{display:flex!important;flex-direction:column!important;gap:17px!important}
+  .hero-copy{order:1!important;width:100%!important;max-width:none!important;margin:0!important}
+  .hero-visual{order:2!important;width:100%!important;max-width:none!important;margin:0!important}
+  .testimonials-banner{width:100vw!important;max-width:100vw!important;margin:14px calc(50% - 50vw) 18px!important}
+}
