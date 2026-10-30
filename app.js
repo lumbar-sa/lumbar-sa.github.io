@@ -32,8 +32,16 @@ const CONFIG={
  });
 })();
 function trackSnap(eventName,params){
- try{if(typeof window.snaptr==='function')window.snaptr('track',eventName,params||{});}
- catch(err){console.warn('Snap Pixel event failed:',eventName,err);}
+ try{
+  if(typeof window.snaptr!=='function'){
+   console.warn('Snap Pixel is not initialized; event not sent:',eventName);
+   return false;
+  }
+  const eventParams=params&&typeof params==='object'?params:{};
+  window.snaptr('track',eventName,eventParams);
+  console.info('[Snap Pixel] event queued:',eventName,eventParams);
+  return true;
+ }catch(err){console.error('[Snap Pixel] event failed:',eventName,err);return false;}
 }
 
 const form=document.getElementById('order-form');
@@ -102,7 +110,8 @@ function showSuccess(o){
 
 let checkoutStarted=false;
 document.addEventListener('click',e=>{
- const a=e.target.closest('a[href="#order"]');
+ const targetElement=e.target instanceof Element?e.target:null;
+ const a=targetElement&&targetElement.closest('a[href="#order"]');
  if(!a)return;
  e.preventDefault();
  if(!checkoutStarted){
