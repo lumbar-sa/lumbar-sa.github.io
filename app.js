@@ -77,12 +77,12 @@ phoneInput.addEventListener('input',()=>{
  phoneError.textContent='';
 });
 function normalizeSaudiPhone(v){
- let s=String(v||'').trim().replace(/[٠-٩]/g,d=>String('٠١٢٣٤٥٦٧٨٩'.indexOf(d))).replace(/[۰-۹]/g,d=>String('۰۱۲۳۴۵۶۷۸۹'.indexOf(d))).replace(/[\\s()\\-\\u200e\\u200f\\u061c]/g,'');
+ let s=String(v||'').trim().replace(/[٠-٩]/g,d=>String('٠١٢٣٤٥٦٧٨٩'.indexOf(d))).replace(/[۰-۹]/g,d=>String('۰۱۲۳۴۵۶۷۸۹'.indexOf(d))).replace(/[\s()\-\u200e\u200f\u061c]/g,'');
  if(s.startsWith('+966'))s='0'+s.slice(4);
  else if(s.startsWith('00966'))s='0'+s.slice(5);
  else if(s.startsWith('966'))s='0'+s.slice(3);
- else if(/^5\\d{8}$/.test(s))s='0'+s;
- return /^05\\d{8}$/.test(s)?s:null;
+ else if(/^5\d{8}$/.test(s))s='0'+s;
+ return /^05\d{8}$/.test(s)?s:null;
 }
 function getUtm(o){
  const q=Object.fromEntries(new URLSearchParams(window.location.search));
