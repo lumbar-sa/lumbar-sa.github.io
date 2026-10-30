@@ -2,11 +2,11 @@ const CONFIG={
  endpoint:'https://script.google.com/macros/s/AKfycbxxBGHE4mZ5iDdplvvaFxVhrHoOMETyRoafgk8iG-DGx9vhY27JgFhc3VHFBO22hu4x0w/exec',
  sku:'LUMBAR-GEL-20G',
  receiverSku:'LUMBAR-GEL-20G',
- product:'Lumbar Spine Cooling Gel (20g)',
+ product:'Lumbar Spine Cooling Gel',
  offers:{
-  1:{label:'عبوة واحدة — 20g',price:173,quantity:1},
-  2:{label:'عبوتان — 40g',price:198,quantity:2},
-  3:{label:'3 عبوات — 60g',price:218,quantity:3}
+  1:{label:'عبوة واحدة',price:173,quantity:1},
+  2:{label:'عبوتان',price:198,quantity:2},
+  3:{label:'3 عبوات',price:218,quantity:3}
  }
 };
 // Snapchat Pixel: initialize once per page; Purchase fires only after the order request is queued.
