@@ -264,3 +264,31 @@ body{padding-bottom:0}
   .hero-proof{gap:8px 12px;margin-bottom:18px;font-size:10px}
   .hero-proof b{width:16px;height:16px}
 }
+
+
+/* Hero customer and sales proof */
+.hero-social-proof{
+  display:flex;
+  align-items:center;
+  gap:clamp(18px,3vw,34px);
+  width:fit-content;
+  max-width:100%;
+  margin:0 0 22px;
+  padding:13px 18px;
+  border:1px solid #d9c79f;
+  background:linear-gradient(110deg,#fffdf7,#f0eadb);
+  box-shadow:0 8px 24px #3b30100a;
+}
+.hero-social-proof div{display:flex;flex-direction:column;gap:3px}
+.hero-social-proof strong{
+  color:#80612d;
+  font:800 clamp(19px,2.2vw,26px)/1.2 "Noto Kufi Arabic",sans-serif;
+}
+.hero-social-proof span{color:#55594f;font-size:11px;font-weight:600}
+.hero-social-proof i{width:1px;height:35px;background:#d8c9a9}
+@media(max-width:760px){
+  .hero-social-proof{gap:17px;padding:11px 13px;margin-bottom:18px}
+  .hero-social-proof strong{font-size:20px}
+  .hero-social-proof span{font-size:10px}
+  .hero-social-proof i{height:31px}
+}
