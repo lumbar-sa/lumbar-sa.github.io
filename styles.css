@@ -236,3 +236,31 @@ body{padding-bottom:0}
  .sticky-order-copy small{font-size:9px!important}
  .sticky-order-action{font-size:13px!important;padding:11px 9px}
 }
+
+
+/* Hero trust points */
+.hero-proof{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:9px 16px;
+  margin:0 0 22px;
+  color:#465344;
+  font-size:11px;
+  font-weight:600;
+}
+.hero-proof span{display:inline-flex;align-items:center;gap:6px}
+.hero-proof b{
+  display:inline-grid;
+  place-items:center;
+  width:17px;
+  height:17px;
+  border-radius:50%;
+  background:#e7ecdf;
+  color:#38583d;
+  font:700 11px Arial,sans-serif;
+}
+@media(max-width:760px){
+  .hero-proof{gap:8px 12px;margin-bottom:18px;font-size:10px}
+  .hero-proof b{width:16px;height:16px}
+}
